@@ -1,0 +1,55 @@
+.btn{
+    padding: 10px 31px;
+    border: 1px solid;
+    border-radius: 27px;
+}
+
+.btn-green{
+    background-color: $brand-green;
+    border-color: $brand-green;
+    color: $white;
+    &:hover{
+        background-color: $white;
+        color: $brand-green;
+    }
+}
+
+.btn-red{
+    background-color: $brand-red;
+    color: $white;
+    &:hover{
+        background-color: lighten($brand-red, 10%);
+    }
+}
+
+.btn-small{
+    padding: 8px 32px;
+    border: none;
+    border-radius: 22px;
+}
+
+.btn-top{
+    padding: 26px 17px;
+    border: none;
+    border-radius: 100px;
+    font: $font-top-btn;
+    background-color: $brand-green;
+    color: $white;
+
+    position: fixed;
+    bottom: 24px;
+    right: 48px;
+    z-index: 2;
+    &:hover{
+        background-color: lighten($brand-green, 10%);
+    }
+
+    @include pad{
+        right: 24px;
+    }
+    @include mobile{
+        padding: 16px 6px;
+        right: 16px;
+        bottom: 15px;
+    }
+}

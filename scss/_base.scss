@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@mixin pad{
+    @media(max-width: 992px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media(max-width: 576px){
+        @content;
+    }
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+body{
+    color: $t-gray-pri;
+}
+
+.container{
+    max-width: 1120px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+    @include pad{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.t-center{
+    text-align: center;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.p-absolute{
+    position: absolute;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+/////好像有規律的文字大小////
+.fz-32-28{
+    font: $font-d-32;
+    @include mobile{
+        font: $font-d-28;
+    }
+}
+/////好像有規律的margin/////
+.mb-100-60{
+    margin-bottom: 100px;
+    @include pad{
+        margin-bottom: 60px;
+    }
+}
+
+.mb-48-32{
+    margin-bottom: 48px;
+    @include pad{
+        margin-bottom: 32px;
+    }
+}
+/////陰影/////
+.shadow{
+    box-shadow: 0 2px 10px #00000014;
+}
+/////圓角/////
+.br-12{
+border-radius: 12px;
+}
+
+.br-50{
+    border-radius: 50px;
+}
+/////背景顏色/////
+.bg-gray{
+    background-color: $bg-gray;
+}
+
+.bg-white{
+    background-color: $white;
+}

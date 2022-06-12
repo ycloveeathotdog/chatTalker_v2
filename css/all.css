@@ -1,0 +1,702 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wendy+One&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body {
+  color: #221E1F;
+}
+
+.container {
+  max-width: 1120px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.fz-32-28 {
+  font: 700 32px/46px "Noto Sans TC", sans-serif;
+}
+@media (max-width: 576px) {
+  .fz-32-28 {
+    font: 700 28px/1.25 "Noto Sans TC", sans-serif;
+  }
+}
+
+.mb-100-60 {
+  margin-bottom: 100px;
+}
+@media (max-width: 992px) {
+  .mb-100-60 {
+    margin-bottom: 60px;
+  }
+}
+
+.mb-48-32 {
+  margin-bottom: 48px;
+}
+@media (max-width: 992px) {
+  .mb-48-32 {
+    margin-bottom: 32px;
+  }
+}
+
+.shadow {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0784313725);
+}
+
+.br-12 {
+  border-radius: 12px;
+}
+
+.br-50 {
+  border-radius: 50px;
+}
+
+.bg-gray {
+  background-color: #F5F5F5;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.navbar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navbar .logo {
+  width: 218px;
+  height: 40px;
+}
+.navbar .btn {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+}
+@media (max-width: 992px) {
+  .navbar {
+    background-color: #FFFFFF;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    border-bottom: #FFD153 2px solid;
+  }
+  .navbar .logo {
+    width: 131px;
+    height: 24px;
+  }
+}
+
+.footer {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+  padding: 16px 0;
+}
+
+.btn {
+  padding: 10px 31px;
+  border: 1px solid;
+  border-radius: 27px;
+}
+
+.btn-green {
+  background-color: #56C4C5;
+  border-color: #56C4C5;
+  color: #FFFFFF;
+}
+.btn-green:hover {
+  background-color: #FFFFFF;
+  color: #56C4C5;
+}
+
+.btn-red {
+  background-color: #FF5D50;
+  color: #FFFFFF;
+}
+.btn-red:hover {
+  background-color: #ff8c83;
+}
+
+.btn-small {
+  padding: 8px 32px;
+  border: none;
+  border-radius: 22px;
+}
+
+.btn-top {
+  padding: 26px 17px;
+  border: none;
+  border-radius: 100px;
+  font: 400 18px/19px "Wendy One", sans-serif;
+  background-color: #56C4C5;
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 24px;
+  right: 48px;
+  z-index: 2;
+}
+.btn-top:hover {
+  background-color: #7cd1d2;
+}
+@media (max-width: 992px) {
+  .btn-top {
+    right: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .btn-top {
+    padding: 16px 6px;
+    right: 16px;
+    bottom: 15px;
+  }
+}
+
+.header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg");
+  background-repeat: no-repeat;
+  background-position: right 10% center, right top;
+  background-size: auto 69%, auto 100%;
+}
+@media (max-width: 992px) {
+  .header {
+    background-position: right 10% top 40%, right top;
+    background-size: auto 60%, contain;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg");
+    background-position: center bottom 5.5%, center bottom 4.6%;
+    background-size: 81.2% auto, 89% auto;
+  }
+}
+
+.header .banner {
+  height: calc(100vh - 88px);
+}
+.header .banner-text {
+  margin-top: -88px;
+}
+.header .banner-text h2 {
+  font: 700 18px/1.5 "Noto Sans TC", sans-serif;
+  color: #56C4C5;
+  margin-bottom: 8px;
+}
+.header .banner-text p {
+  font: 700 48px/70px "Noto Sans TC", sans-serif;
+  margin-bottom: 16px;
+}
+.header .banner-text h3 {
+  font: 400 20px/1.5 "Noto Sans TC", sans-serif;
+}
+@media (max-width: 576px) {
+  .header .banner {
+    height: auto;
+  }
+  .header .banner-text {
+    margin-top: 32px;
+  }
+  .header .banner-text h2 {
+    font: 700 16px/1.5 "Noto Sans TC", sans-serif;
+  }
+  .header .banner-text p {
+    font: 700 32px/46px "Noto Sans TC", sans-serif;
+  }
+  .header .banner-text h3 {
+    font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+  }
+}
+
+.ball-01 {
+  width: 138px;
+  height: 360px;
+  top: calc(100vh - 180px);
+  left: 0px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+@media (max-width: 992px) {
+  .ball-01 {
+    top: calc(100vh - 105px);
+    width: 90px;
+    height: 210px;
+    background-size: cover;
+  }
+}
+@media (max-width: 576px) {
+  .ball-01 {
+    width: 49px;
+    height: 123px;
+    top: calc(100vh + 60px + 16px);
+  }
+}
+
+.sns {
+  padding: 0 75.5px;
+}
+.sns-list {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.sns-type-title {
+  font: 700 24px/1.25 "Noto Sans TC", sans-serif;
+  margin-bottom: 24px;
+}
+.sns-type-bodytext {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+  color: #747474;
+}
+.sns-img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 24px;
+}
+@media (max-width: 992px) {
+  .sns {
+    padding: 0 20px;
+  }
+  .sns-type-title {
+    font: 700 18px/1.5 "Noto Sans TC", sans-serif;
+    margin-bottom: 16px;
+  }
+  .sns-img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .sns-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 24px;
+  }
+  .sns-type {
+    width: 100%;
+  }
+  .sns-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.situation .section-title {
+  margin-bottom: 16px;
+}
+.situation .description {
+  font: 400 20px/1.5 "Noto Sans TC", sans-serif;
+}
+.situation-list {
+  gap: 16px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.situation-type {
+  width: 260px;
+  padding-bottom: 24px;
+}
+.situation-img {
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+}
+.situation-type-title {
+  font: 700 16px/1.5 "Noto Sans TC", sans-serif;
+  color: #56C4C5;
+  margin-bottom: 16px;
+}
+.situation-type-bodytext {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+}
+@media (max-width: 992px) {
+  .situation-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 32px;
+  }
+  .situation-type {
+    width: 35%;
+  }
+}
+@media (max-width: 576px) {
+  .situation .description {
+    font: 400 18px/1.5 "Noto Sans TC", sans-serif;
+  }
+  .situation-list {
+    gap: 24px;
+  }
+  .situation-type {
+    width: 260px;
+  }
+}
+
+.ball-02 {
+  width: 210px;
+  height: 310px;
+  right: 0;
+  top: 411px;
+  z-index: -1;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg");
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .ball-02 {
+    width: 88px;
+    height: 135px;
+    top: initial;
+    bottom: -33px;
+  }
+}
+
+.feature {
+  padding-right: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.feature-list {
+  width: 48.8%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 47px 28px;
+}
+.feature-list-item {
+  width: 230px;
+  padding: 32px 32px 48px;
+}
+.feature-img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+.feature-title {
+  font: 700 18px/1.5 "Noto Sans TC", sans-serif;
+  margin-bottom: 16px;
+}
+.feature-description {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+}
+.feature .section-text {
+  width: 38.1%;
+}
+.feature .section-text-title {
+  margin-bottom: 16px;
+}
+.feature .section-text-description {
+  font: 400 18px/1.5 "Noto Sans TC", sans-serif;
+  margin-bottom: 24px;
+}
+.feature .btn {
+  font: 400 18px/1.5 "Noto Sans TC", sans-serif;
+}
+@media (max-width: 992px) {
+  .feature {
+    padding-right: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .feature-list {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 24px 32px;
+  }
+  .feature-list-item {
+    width: 35%;
+    padding: 32px 32px 48px;
+  }
+  .feature .section-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .feature-list {
+    gap: 24px;
+  }
+  .feature-list-item {
+    width: 230px;
+    padding: 32px 24px 48px;
+  }
+  .feature-title {
+    margin-bottom: 20px;
+  }
+  .feature .section-text-description {
+    font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+    margin-bottom: 16px;
+  }
+}
+
+.comment h2 {
+  margin-bottom: 104px;
+}
+.comment-list {
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.comment-card {
+  width: 32.4%;
+  padding: 48px 32px 24px;
+}
+.comment .user-img {
+  width: 80px;
+  height: 80px;
+  top: -56px;
+  left: 32px;
+}
+.comment .user-comment {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+  letter-spacing: -1%;
+  padding-bottom: 24px;
+  border-bottom: #DDDDDD 1px solid;
+}
+.comment .user-title {
+  font: 700 16px/1.5 "Noto Sans TC", sans-serif;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+.comment .user-evaluate {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.comment .user-name {
+  font: 400 16px/1.5 "Noto Sans TC", sans-serif;
+}
+.comment .value {
+  width: 121px;
+  height: 16px;
+  gap: 8px;
+}
+.comment .value-img {
+  width: 17px;
+  height: 16px;
+}
+@media (max-width: 992px) {
+  .comment-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .comment-list > :last-child {
+    display: none;
+  }
+  .comment-card {
+    width: 40%;
+  }
+}
+@media (max-width: 576px) {
+  .comment h2 {
+    margin-bottom: 88px;
+  }
+  .comment-list > :nth-child(2) {
+    display: none;
+  }
+  .comment-card {
+    width: 335px;
+    padding: 48px 16px 16px;
+  }
+  .comment .user-comment {
+    letter-spacing: normal;
+    padding-bottom: 16px;
+  }
+  .comment .user-title {
+    margin-top: 16px;
+  }
+}
+
+.pagination {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+.pagination-item {
+  width: 10px;
+  height: 10px;
+  background-color: #DDDDDD;
+}
+.pagination .activate {
+  width: 16px;
+  background-color: #FFD153;
+}
+
+.ball-03 {
+  width: 150px;
+  height: 150px;
+  top: 42px;
+  left: -73px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
+  background-size: cover;
+  z-index: -1;
+}
+@media (max-width: 992px) {
+  .ball-03 {
+    left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .ball-03 {
+    width: 77px;
+    height: 153px;
+    top: 40px;
+    background-position: right;
+  }
+}
+
+.footer-CTA {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.footer-CTA .footer-context {
+  padding-top: 260px;
+  padding-bottom: 100px;
+}
+.footer-CTA .footer-context-title {
+  font: 700 32px/46px "Noto Sans TC", sans-serif;
+  margin-bottom: 48px;
+}
+.footer-CTA .footer-context .btn {
+  font: 400 18px/1.5 "Noto Sans TC", sans-serif;
+}
+@media (max-width: 992px) {
+  .footer-CTA .footer-context {
+    padding-top: 293px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-CTA {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg");
+    background-size: contain;
+  }
+  .footer-CTA .footer-context-title {
+    margin-bottom: 24px;
+    font: 700 24px/1.25 "Noto Sans TC", sans-serif;
+  }
+}

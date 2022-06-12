@@ -1,0 +1,33 @@
+/////字型/////
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+$font-family:'Noto Sans TC', sans-serif;
+
+$font-d-48: 700 48px/70px $font-family;
+$font-d-32: 700 32px/46px $font-family;
+$font-d-28: 700 28px/1.25 $font-family;
+$font-d-24: 700 24px/1.25 $font-family;
+$font-d-18: 700 18px/1.5 $font-family;
+$font-d-16: 700 16px/1.5 $font-family;
+$font-d-12: 400 12px/1.5 $font-family;
+
+$font-t-20: 400 20px/1.5 $font-family;
+$font-t-18: 400 18px/1.5 $font-family;
+$font-t-16: 400 16px/1.5 $font-family;
+$font-t-14: 400 14px/1.5 $font-family;
+
+$font-symtext: 400 29px/1.25 $font-family;
+$font-unit: 700 12px/1.5 $font-family;  //可以用sub來著？
+
+$font-top-btn: 400 18px/19px 'Wendy One', sans-serif;
+/////顏色/////
+$brand-green: #56C4C5;
+$brand-yellow: #FFD153;
+$brand-red: #FF5D50;
+$t-gray-pri: #221E1F;
+$t-gray-sec: #747474;
+$white: #FFFFFF;
+$component-gray: #DDDDDD;
+$bg-gray: #F5F5F5;
+$bg-gray-light: #F7F9FD;
+

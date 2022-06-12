@@ -1,0 +1,27 @@
+.navbar{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    justify-content: space-between;
+    .logo{
+        width: 218px;
+        height: 40px;
+    }
+    .btn{
+        font: $font-t-16;
+    }
+    @include pad{
+        background-color: $white;
+        padding-top: 16px;
+        padding-bottom: 14px;
+        border-bottom: $brand-yellow 2px solid;
+        .logo{
+            width: 131px;
+            height: 24px;
+        }
+    }
+}
+
+.footer{
+    font: $font-t-16;
+    padding: 16px 0;
+}
